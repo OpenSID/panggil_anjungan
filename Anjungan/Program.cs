@@ -137,10 +137,10 @@ namespace Anjungan
             //load
             Properties config = new Properties(V);
             //get value with default value
-            var url_opensid = config.get("url_opensid", "https://192.168.33.11/premium");
+            var url_opensid = config.get("url_opensid", "https://berputar.opensid.or.id");
             var raw_mac_address = GetCurrentMAC("www.google.com").ToString().SplitInParts(2);
             var mac_address = String.Join(":", raw_mac_address);
-            token = config.get("token_layanan", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6bnVsbCwidGltZXN0YW1wIjoxNjAzNDY2MjM5fQ.HVCNnMLokF2tgHwjQhSIYo6-2GNXB4-Kf28FSIeXnZw");
+            token = config.get("token_layanan", "isi-token-layanan-opendesa");
             url_anjungan = url_opensid + "/index.php/layanan-mandiri/masuk?mac_address=" + mac_address + "&token_layanan=" + token;
             Console.WriteLine(url_anjungan);
             var myProgram = new Program();
